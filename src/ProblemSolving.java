@@ -27,18 +27,6 @@ public class ProblemSolving {
   }
 
   /**
-   * Returns the length of the shortest word in the set.
-   * 
-   * Edge case: if set is empty, return Integer.MAX_VALUE
-   * 
-   * @param words a set of words
-   * @return the minimum length of a word in the set
-   */
-  public static int minLength(Set<String> words) {
-    return Integer.MAX_VALUE;
-  }
-
-  /**
    * Returns the length of the longest word in the set.
    * 
    * Edge case: If the set is empty, return 0
@@ -48,5 +36,17 @@ public class ProblemSolving {
    */
   public static int maxLength(Set<String> words) {
     return 0;
+  }
+
+ /**
+   * Returns the length of the shortest word in the set.
+   * 
+   * Edge case: if set is empty, return Integer.MAX_VALUE
+   * 
+   * @param words a set of words
+   * @return the minimum length of a word in the set
+   */
+  public static int minLength(Set<String> words) {
+    return Integer.MAX_VALUE;
   }
 }
