@@ -3,7 +3,8 @@ import java.util.Set;
 public class ProblemSolving {
 
   /**
-   * Returns whether every word in the set starts with the letter A.
+   * Returns whether every word in the set starts with the letter A (either
+   * upper or lower case).
    * 
    * Edge case: If set is empty, return true.
    * 
