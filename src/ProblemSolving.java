@@ -40,8 +40,6 @@ public class ProblemSolving {
   public static boolean hasEmptyString(Set<String> words) {
 
     boolean truthTeller = false;
-    String compare = "";
-
 
     if(words.contains(""))
     {
@@ -72,7 +70,19 @@ public class ProblemSolving {
    * @return the maximum length of a word in the set
    */
   public static int maxLength(Set<String> words) {
-    return 0;
+
+    int longestValue = 0;
+    
+    for(String item: words)
+    {
+      if(longestValue <= item.length())
+      {
+        longestValue = item.length();
+      }
+    }
+
+
+    return longestValue;
   }
 
  /**
@@ -84,6 +94,17 @@ public class ProblemSolving {
    * @return the minimum length of a word in the set
    */
   public static int minLength(Set<String> words) {
-    return Integer.MAX_VALUE;
+
+    int smallestInt = Integer.MAX_VALUE;
+
+    for(String item: words)
+    {
+      if(smallestInt > item.length())
+      {
+        smallestInt = item.length();
+      }
+    }
+
+    return smallestInt;
   }
 }
