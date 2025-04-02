@@ -14,17 +14,16 @@ public class ProblemSolving {
   public static boolean allStartWithA(Set<String> words) {
 
     boolean truthTeller = false;
-    for(int i = 0; i < words.size(); i++)
+    for(String item: words)
     {
-      String items = words.toString();
-      if(items.toLowerCase().charAt(0) == 'a')
+      if(Character.toUpperCase(item.charAt(0)) == 'A')
       {
         truthTeller = true;
       }
       else
       {
         truthTeller = false;
-        continue;
+        break;
       }
     }
     return truthTeller;
