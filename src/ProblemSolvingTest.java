@@ -153,11 +153,11 @@ public class ProblemSolvingTest {
   @Test
   void testMaxLength_spaceStrings() {
     // arrange
-    Set<String> input = Set.of("", " ");
+    Set<String> input = Set.of(" ", "  ", "   ");
     // act
     int actual = ProblemSolving.maxLength(input);
     // assert
-    assertEquals(1, actual);
+    assertEquals(3, actual);
   }
 
 
@@ -179,6 +179,46 @@ public class ProblemSolvingTest {
     int actual = ProblemSolving.minLength(input);
     // assert
     assertEquals(3, actual);
+  }
+
+  @Test
+  void testMinLength_emptySet() {
+    // arrange
+    Set<String> input = Set.of();
+    // act
+    int actual = ProblemSolving.minLength(input);
+    // assert
+    assertEquals(0, actual);
+  }
+
+  @Test
+  void testMinLength_similarSizes() {
+    // arrange
+    Set<String> input = Set.of("One", "Two", "Big");
+    // act
+    int actual = ProblemSolving.minLength(input);
+    // assert
+    assertEquals(3, actual);
+  }
+
+  @Test
+  void testMinLength_spaceStrings() {
+    // arrange
+    Set<String> input = Set.of(" ", "  ", "   ");
+    // act
+    int actual = ProblemSolving.minLength(input);
+    // assert
+    assertEquals(1, actual);
+  }
+
+  @Test
+  void testMinLength_emptyStrings() {
+    // arrange
+    Set<String> input = Set.of("");
+    // act
+    int actual = ProblemSolving.minLength(input);
+    // assert
+    assertEquals(0, actual);
   }
 
 }

@@ -14,9 +14,10 @@ public class ProblemSolving {
   public static boolean allStartWithA(Set<String> words) {
 
     boolean truthTeller = false;
-    for(String item: words)
+    for(int i = 0; i < words.size(); i++)
     {
-      if(item.toLowerCase().charAt(0) == 'a')
+      String items = words.toString();
+      if(items.toLowerCase().charAt(0) == 'a')
       {
         truthTeller = true;
       }
@@ -99,10 +100,15 @@ public class ProblemSolving {
 
     for(String item: words)
     {
-      if(smallestInt > item.length())
+      if(smallestInt >= item.length())
       {
         smallestInt = item.length();
       }
+    }
+
+    if(words.isEmpty() && smallestInt > 0)
+    {
+      smallestInt = 0;
     }
 
     return smallestInt;
