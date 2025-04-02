@@ -14,7 +14,6 @@ public class ProblemSolving {
   public static boolean allStartWithA(Set<String> words) {
 
     boolean truthTeller = false;
-
     for(String item: words)
     {
       if(item.toLowerCase().charAt(0) == 'a')
@@ -27,8 +26,6 @@ public class ProblemSolving {
         continue;
       }
     }
-
-
     return truthTeller;
   }
 
@@ -41,7 +38,37 @@ public class ProblemSolving {
    * @return true if there is at least one empty string, false otherwise
    */
   public static boolean hasEmptyString(Set<String> words) {
-    return false;
+
+    boolean truthTeller = false;
+    String compare = "";
+
+    // for(String item: words)
+    // {
+    //   if(item == "")
+    //   {
+    //     truthTeller = true;
+    //   }
+    //   else
+    //   {
+    //     truthTeller = false;
+    //     continue;
+    //   }
+    // }
+
+
+    for(int i = 0; i < words.size(); i++)
+    {
+      if(words.contains(compare))
+      {
+        truthTeller = true;
+      }
+      else
+      {
+        truthTeller = false;
+      }
+    }
+
+    return truthTeller;
   }
 
   /**

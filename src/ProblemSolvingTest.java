@@ -27,12 +27,49 @@ public class ProblemSolvingTest {
     assertFalse(actual);
   }
 
+
+  @Test
+  void testAllStartWithA_singleElement()
+  {
+    // arrange
+    Set<String> input = Set.of("armadillo", "utopia", "Arcanine");
+    // act
+    boolean actual = ProblemSolving.allStartWithA(input);
+    // assert
+    assertFalse(actual);
+  }
+
+  @Test
+  void testAllStartWithA_emptySet()
+  {
+    // arrange
+    Set<String> input = Set.of();
+    // act
+    boolean actual = ProblemSolving.allStartWithA(input);
+    // assert
+    assertFalse(actual);
+  }
+
+  @Test
+  void testAllStartWithA_noneStartWithA()
+  {
+    // arrange
+    Set<String> input = Set.of("Bob","bill","John","ron");
+    // act
+    boolean actual = ProblemSolving.allStartWithA(input);
+    // assert
+    assertFalse(actual);
+  }
+
+  
+
+
   // TODO:
   // Come up with more tests to thoroughly test testAllStartWithA
   // Suggestions:
-  //  - test an empty set
-  //  - test a set where none start with A
-  //  - test a set with only a single element
+  //  - test an empty set v/
+  //  - test a set where none start with A v/
+  //  - test a set with only a single element v/
   //  - more you can think of!
 
   @Test
@@ -49,6 +86,16 @@ public class ProblemSolvingTest {
   void testHasEmptyString_trueOneEmpty() {
     // arrange
     Set<String> input = Set.of("armadillo", "", "utopia", "yeah");
+    // act
+    boolean actual = ProblemSolving.hasEmptyString(input);
+    // assert
+    assertTrue(actual);
+  }
+
+  @Test
+  void testHasEmptyString_emptySet() {
+    // arrange
+    Set<String> input = Set.of();
     // act
     boolean actual = ProblemSolving.hasEmptyString(input);
     // assert
