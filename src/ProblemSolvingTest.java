@@ -102,6 +102,18 @@ public class ProblemSolvingTest {
     assertTrue(actual);
   }
 
+  @Test
+  void testHasEmptyString_oneEmptyWithSpaceStrings() {
+    // arrange
+    
+    Set<String> input = Set.of("", " ", "  ");
+    
+    // act
+    boolean actual = ProblemSolving.hasEmptyString(input);
+    // assert
+    assertTrue(actual);
+  }
+
   
 
 
