@@ -42,31 +42,23 @@ public class ProblemSolving {
     boolean truthTeller = false;
     String compare = "";
 
-    // for(String item: words)
-    // {
-    //   if(item == "")
-    //   {
-    //     truthTeller = true;
-    //   }
-    //   else
-    //   {
-    //     truthTeller = false;
-    //     continue;
-    //   }
-    // }
 
-
-    for(int i = 0; i < words.size(); i++)
+    if(words.contains(""))
     {
-      if(words.contains(compare))
-      {
-        truthTeller = true;
-      }
-      else
-      {
-        truthTeller = false;
-      }
+      truthTeller = true;
     }
+    else
+    {
+      truthTeller = false;
+    }
+    
+
+    if(words.size() == 0)
+    {
+      truthTeller = true;
+    }
+
+    
 
     return truthTeller;
   }
