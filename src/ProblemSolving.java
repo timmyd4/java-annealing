@@ -12,21 +12,17 @@ public class ProblemSolving {
    * @return true if every word starts with A (case-insensitive), false otherwise.
    */
   public static boolean allStartWithA(Set<String> words) {
+    if(words.isEmpty()) return false;
 
-    boolean truthTeller = false;
-    for(String item: words)
+    for(String items: words)
     {
-      if(Character.toUpperCase(item.charAt(0)) == 'A')
+      if(items.toLowerCase().charAt(0) != 'a')
       {
-        truthTeller = true;
-      }
-      else
-      {
-        truthTeller = false;
-        break;
+        return false;
       }
     }
-    return truthTeller;
+
+    return true;
   }
 
   /**
@@ -38,27 +34,7 @@ public class ProblemSolving {
    * @return true if there is at least one empty string, false otherwise
    */
   public static boolean hasEmptyString(Set<String> words) {
-
-    boolean truthTeller = false;
-
-    if(words.contains(""))
-    {
-      truthTeller = true;
-    }
-    else
-    {
-      truthTeller = false;
-    }
-    
-
-    if(words.size() == 0)
-    {
-      truthTeller = true;
-    }
-
-    
-
-    return truthTeller;
+    return false;
   }
 
   /**
@@ -70,19 +46,7 @@ public class ProblemSolving {
    * @return the maximum length of a word in the set
    */
   public static int maxLength(Set<String> words) {
-
-    int longestValue = 0;
-    
-    for(String item: words)
-    {
-      if(longestValue <= item.length())
-      {
-        longestValue = item.length();
-      }
-    }
-
-
-    return longestValue;
+    return 0;
   }
 
  /**
@@ -94,22 +58,6 @@ public class ProblemSolving {
    * @return the minimum length of a word in the set
    */
   public static int minLength(Set<String> words) {
-
-    int smallestInt = Integer.MAX_VALUE;
-
-    for(String item: words)
-    {
-      if(smallestInt >= item.length())
-      {
-        smallestInt = item.length();
-      }
-    }
-
-    if(words.isEmpty() && smallestInt > 0)
-    {
-      smallestInt = 0;
-    }
-
-    return smallestInt;
+    return Integer.MAX_VALUE;
   }
 }
