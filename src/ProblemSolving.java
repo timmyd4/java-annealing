@@ -34,6 +34,16 @@ public class ProblemSolving {
    * @return true if there is at least one empty string, false otherwise
    */
   public static boolean hasEmptyString(Set<String> words) {
+    if(words.isEmpty()) return true;
+
+    for(String items: words)
+    {
+      if(items == "")
+      {
+        return true;
+      }
+    }
+
     return false;
   }
 
